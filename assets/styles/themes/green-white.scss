@@ -1,0 +1,308 @@
+/**
+ * @description 绿-白
+ */
+
+body.theme-green-white {
+  $base-menu-background: #fff;
+  $base-main-tone: #41b584;
+  $base-main-tone-light: mix($base-fill-1, $base-main-tone, 90%);
+
+  @import '../default.scss';
+
+  @mixin container {
+    color: #515a6e !important;
+    background: $base-menu-background !important;
+  }
+
+  @mixin container-column {
+    color: #515a6e !important;
+    background: #f7f9ff !important;
+  }
+
+  @mixin active {
+    &:hover {
+      color: $base-main-tone !important;
+      background-color: $base-main-tone-light !important;
+    }
+
+    &.is-active {
+      color: $base-main-tone !important;
+      background-color: $base-main-tone-light !important;
+    }
+  }
+
+  .logo-container-common,
+  .logo-container-vertical,
+  .logo-container-horizontal,
+  .logo-container-comprehensive,
+  .logo-container-float {
+    @include container;
+
+    .title,
+    .zn-icon {
+      @include container;
+    }
+  }
+
+  .logo-container-column {
+    @include container;
+
+    .title {
+      @include container;
+    }
+
+    .logo,
+    .zn-icon {
+      @include container-column;
+    }
+  }
+
+  .zn-column-bar-container {
+    .el-tabs {
+      @include container-column;
+
+      .el-tabs__nav-wrap.is-left {
+        background: #f7faff !important;
+      }
+
+      .el-tabs__item,
+      .el-tabs__nav {
+        @include container-column;
+      }
+
+      .el-tabs__header .el-tabs__item.is-active {
+        color: $base-fill-1 !important;
+        background: $base-main-tone !important;
+      }
+    }
+
+    .el-menu {
+      .el-menu-item.is-active,
+      .el-submenu__title.is-active,
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        i {
+          color: $base-main-tone !important;
+        }
+
+        color: $base-main-tone !important;
+        background-color: $base-main-tone-light !important;
+      }
+    }
+
+    &-card {
+      .el-tabs {
+        .el-tabs__header .el-tabs__item {
+          &.is-active {
+            background: transparent !important;
+            .zn-column-grid {
+              background: $base-main-tone !important;
+            }
+          }
+        }
+      }
+    }
+
+    &-arrow {
+      .el-tabs {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-text-5 !important;
+            background: transparent !important;
+
+            .zn-column-grid {
+              background: transparent !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .layout-vertical,
+  .layout-horizontal,
+  .layout-comprehensive,
+  .layout-common,
+  .layout-float {
+    .el-menu {
+      @include container;
+
+      .el-submenu__title {
+        @include container;
+      }
+
+      .el-menu-item {
+        @include container;
+      }
+    }
+
+    .zn-side-bar,
+    .comprehensive-bar-container {
+      @include container;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08) !important;
+
+      .el-menu-item {
+        @include active;
+      }
+    }
+  }
+
+  .layout-float {
+    .el-scrollbar__view .el-menu--collapse.el-menu li.el-submenu.is-active {
+      .el-submenu__title {
+        background-color: transparent !important;
+      }
+      > .el-submenu__title {
+        color: $base-main-tone !important;
+        background-color: $base-main-tone-light !important;
+      }
+    }
+  }
+
+  .zn-header {
+    @include container;
+
+    .right-panel {
+      .user-name,
+      .user-name *,
+      > i,
+      > div > i,
+      > span > i,
+      > div > span > i,
+      > svg,
+      > div > svg,
+      > span > svg,
+      > div > span > svg {
+        @include container;
+      }
+    }
+
+    .zn-main {
+      @include container;
+
+      .ri-notification-line {
+        color: #515a6e !important;
+      }
+
+      .el-menu {
+        &--horizontal {
+          .el-menu-item {
+            &.is-active {
+              @include active;
+            }
+          }
+
+          .el-submenu,
+          .el-menu-item {
+            @include active;
+          }
+        }
+      }
+    }
+  }
+
+  .zn-tabs {
+    &-more {
+      &-active,
+      &:hover {
+        .zn-tabs-more-icon {
+          .box:before,
+          .box:after {
+            background: $base-main-tone !important;
+          }
+        }
+      }
+    }
+
+    .zn-tabs-content-card {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-main-tone !important;
+            background: $base-main-tone-light-9 !important;
+            border: 1px solid $base-main-tone !important;
+          }
+
+          &:hover {
+            border: 1px solid $base-main-tone !important;
+          }
+        }
+      }
+    }
+
+    .zn-tabs-content-smart {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            background: $base-main-tone-light-9 !important;
+          }
+
+          &:after {
+            background-color: $base-main-tone !important;
+          }
+
+          &:hover {
+            background: $base-main-tone-light-9 !important;
+          }
+        }
+      }
+    }
+
+    .zn-tabs-content-smooth {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-main-tone !important;
+            background: $base-main-tone-light-9 !important;
+
+            &:hover {
+              color: $base-main-tone !important;
+              background: $base-main-tone-light-9 !important;
+            }
+          }
+
+          &:hover {
+            color: $base-text-5 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .step-form-container {
+    .el-steps {
+      .el-step__head.is-process {
+        color: $base-main-tone !important;
+        border-color: $base-main-tone !important;
+
+        .el-step__icon.is-text {
+          color: $base-main-tone !important;
+          background: mix($base-fill-1, $base-main-tone, 90%) !important;
+        }
+
+        .el-step__line {
+          background: $base-main-tone !important;
+        }
+      }
+
+      .el-step__title.is-process {
+        color: $base-main-tone !important;
+      }
+
+      .el-step__description.is-process {
+        color: $base-main-tone !important;
+      }
+
+      .el-step__head.is-finish {
+        .el-step__icon.is-text {
+          color: $base-fill-1 !important;
+          background: $base-main-tone !important;
+        }
+
+        .el-step__line {
+          background: $base-main-tone !important;
+        }
+      }
+    }
+  }
+}

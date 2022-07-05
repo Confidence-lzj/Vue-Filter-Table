@@ -1,0 +1,173 @@
+/**
+ * @description 全局主题变量配置
+ */
+//颜色配置
+$base-main-tone: #005BD9; //项目主色调
+$base-text-5: #303133;
+$base-color-orange: #ff6700;
+$base-color-red: #ff4d4f;
+$base-color-background: #f6f8f9;
+$base-color-public: #EDF0F2;
+$base-color-text-secondary: #909399;
+$base-color-text-placeholder: #c0c4cc;
+$base-border-color-base: #dcdfe6;
+$base-border-color-light: #e4e7ed;
+$base-border-color-lighter: #ebeef5;
+$base-border-color-extra-light: #f2f6fc;
+$base-background-color-base: #f5f7fa;
+// 本项目UI指定色值
+// Brand color
+$base-Brand1-6:#005BD9;
+$base-Brand1-5:#1A74EF;
+$base-Brand1-7:#0056CA;
+$base-Brand1-3:#B3CEF4;
+$base-Brand1-1:#E6EFFB;
+// Neutral color
+// 线条 Line
+$base-line-4:#86909C;
+$base-line-3:#C9CDD4;
+$base-line-2:#E5E6EB;
+$base-line-1:#F2F3F5;
+// 填充 Fill
+$base-fill-6:#4E5969;
+$base-fill-5:#C9CDD4;
+$base-fill-4:#E5E6EB;
+$base-fill-3:#F2F3F5;
+$base-fill-2:#F7F8FA;
+$base-fill-1:#ffffff;
+// 文字 Text
+$base-text-5:#1D2129;
+$base-text-4:#4E5969;
+$base-text-3:#86909C;
+$base-text-2:#C9CDD4;
+$base-text-1:#FFFFFF;
+// Functional color
+// 成功 Success
+$base-Success-6:#00B47E;
+$base-Success-5:#23C389;
+$base-Success-7:#009A75;
+$base-Success-3:#7BE1A4;
+$base-Success-1:#E8FFF0;
+// 提示 Notice
+$base-Notice-6:#FF7D00;
+$base-Notice-5:#FF9A2E;
+$base-Notice-7:#D25F00;
+$base-Notice-3:#FFCF8B;
+$base-Notice-1:#FFF7E8;
+// 错误 Error
+$base-Error-6:#F53F3F;
+$base-Error-5:#F76560;
+$base-Error-7:#CB2634;
+$base-Error-3:#FBACA3;
+$base-Error-1:#FFECE8;
+// 警告  Warning
+$base-Warning-6:#FFA336;
+$base-Warning-5:#FFB257;
+$base-Warning-7:#E1953C;
+$base-Warning-3:#FFD4A1;
+$base-Warning-1:#FFF6EC;
+// 其他系统色
+// 通话 Green
+$base-Green-6:#21D17D;
+$base-Green-5:#37D68A;
+$base-Green-7:#0AA87D;
+$base-Green-3:#A6EDCB;
+$base-Green-1:#E9FAF2;
+// 忙碌 Red
+$base-Red-6:#F94B4B;
+$base-Red-5:#FA5D5D;
+$base-Red-7:#EB4242;
+$base-Red-3:#FDC9C9;
+$base-Red-1:#FEEDED;
+// 空闲 Blue
+$base-Blue-6:#36B0F0;
+$base-Blue-5:#4AB8F2;
+$base-Blue-7:#2BA1DE;
+$base-Blue-3:#9BD8F8;
+$base-Blue-1:#EDF8FE;
+
+//默认层级
+$base-z-index: 1999;
+//分栏最左侧菜单背景色
+$base-column-first-menu-background: linear-gradient(to right, #202F43, #000);
+//分栏菜单背景色
+$base-column-second-menu-background: #fff;
+//分栏菜单选中背景色
+$base-column-second-menu-background-active: rgba(#1890ff, 0.1);
+//横向、纵向菜单背景色
+$base-menu-background: #282c34;
+//菜单文字颜色
+$base-menu-color: hsla(0, 0%, 100%, 0.95);
+//菜单选中文字颜色
+$base-menu-color-active: hsla(0, 0%, 100%, 0.95);
+//菜单选中背景色
+$base-menu-background-active: $base-main-tone;
+//标题颜色
+$base-title-color: #fff;
+//字体大小配置
+$base-font-size-small: 12px;
+$base-font-size-default: 14px;
+$base-font-size-big: 16px;
+$base-font-size-bigger: 18px;
+$base-font-size-max: 22px;
+//最大宽度
+$base-main-width: 1279px;
+//圆角
+$base-border-radius: 2.5px;
+$base-border-radius-4:4px;
+$base-border-radius-6:6px;
+$base-border-radius-8:8px;
+//边框颜色
+$base-border-color: #dcdfe6;
+//输入框高度
+$base-input-height: 40px;
+//默认margin
+$base-margin: 20px;
+//默认padding
+$base-padding: 16px;
+//默认padding-10px
+$base-padding-10: 10px;
+//默认阴影
+$base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+//横向top-bar、logo、一级菜单的高度
+$base-top-bar-height: 60px;
+//纵向、综合、分栏logo的高度
+$base-logo-height: 60px;
+//顶部nav-bar的高度
+$base-nav-height: 60px;
+//顶部标签页tabs-bar的高度
+$base-tabs-height: 50px;
+//顶部标签页tabs-bar中每一个item的高度
+$base-tag-item-height: 34px;
+//菜单li标签的高度
+$base-menu-item-height: 44px;
+//app-main的高度
+$base-keep-alive-height: calc(100vh - #{$base-nav-height} - #{$base-tabs-height} - #{$base-padding} * 2);
+//纵向左侧导航未折叠的宽度
+$base-left-menu-width: 302px;
+//纵向左侧导航未折叠右侧内容的宽度
+$base-right-content-width: calc(100% - #{$base-left-menu-width});
+//纵向左侧导航已折叠的宽度
+$base-left-menu-width-min: 68px;
+//纵向左侧导航已折叠右侧内容的宽度
+$base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
+//默认动画
+$base-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+border 0s,
+color 0.1s,
+font-size 0s;
+//默认动画长
+$base-transition-time: 0.3s;
+
+:export {
+  // 菜单文字颜色变量导出
+  menu-color: $base-menu-color;
+  // 菜单选中文字颜色变量导出
+  menu-color-active: $base-menu-color-active;
+  // 菜单背景色变量导出
+  menu-background: $base-menu-background;
+  // 分栏菜单背景色变量导出
+  column-second-menu-background: $base-column-second-menu-background;
+  base-color-public: $base-color-public;
+  base-color-text-secondary: $base-color-text-secondary;
+}

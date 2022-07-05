@@ -1,0 +1,170 @@
+/**
+ * @description 渐变
+ */
+
+body.theme-ocean {
+  $base-main-tone-active: #399efd;
+  $base-main-tone: #1890ff;
+  $base-main-tone-light: mix($base-fill-1, $base-main-tone, 90%);
+
+  @mixin container {
+    background: linear-gradient(to right, #006cff, #399efd) !important;
+  }
+
+  @mixin active {
+    &:hover {
+      color: $base-fill-1;
+      background-color: $base-main-tone-active !important;
+    }
+
+    &.is-active {
+      color: $base-fill-1;
+      background-color: $base-main-tone-active !important;
+    }
+  }
+
+  .logo-container-horizontal {
+    background: $base-main-tone !important;
+  }
+
+  .logo-container-vertical,
+  .logo-container-comprehensive,
+  .logo-container-float {
+    @include container;
+  }
+
+  .logo-container-column {
+    .logo {
+      @include container;
+    }
+  }
+
+  .zn-column-bar-container {
+    .el-tabs {
+      .el-tabs__nav-wrap.is-left {
+        @include container;
+      }
+
+      .el-tabs__nav {
+        @include container;
+      }
+    }
+
+    .el-menu {
+      .el-menu-item.is-active,
+      .el-submenu__title.is-active,
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        i {
+          color: $base-main-tone !important;
+        }
+
+        color: $base-main-tone !important;
+        background-color: $base-main-tone-light !important;
+      }
+    }
+
+    &-card {
+      .el-tabs {
+        .el-tabs__item {
+          &.is-active {
+            background: transparent !important;
+          }
+        }
+      }
+    }
+  }
+
+  .layout-horizontal {
+    .zn-header {
+      background: $base-main-tone !important;
+    }
+
+    .el-menu {
+      background: $base-main-tone !important;
+
+      .el-submenu__title {
+        background: $base-main-tone !important;
+      }
+
+      .el-menu-item {
+        background: $base-main-tone !important;
+      }
+    }
+
+    .zn-side-bar,
+    .comprehensive-bar-container {
+      background: $base-main-tone !important;
+
+      .el-menu-item {
+        @include active;
+      }
+    }
+  }
+
+  .layout-vertical,
+  .layout-comprehensive,
+  .layout-common,
+  .layout-float {
+    .zn-side-bar,
+    .comprehensive-bar-container {
+      @include container;
+
+      .el-menu {
+        @include container;
+        @include active;
+
+        .el-submenu__title,
+        .el-menu-item {
+          background-color: transparent !important;
+          @include active;
+
+          &.is-active {
+            background-color: $base-main-tone-active !important;
+          }
+        }
+      }
+    }
+  }
+
+  .layout-float {
+    .el-scrollbar__view .el-menu--collapse.el-menu li.el-submenu.is-active {
+      .el-submenu__title {
+        background-color: transparent !important;
+      }
+      > .el-submenu__title {
+        background-color: $base-main-tone !important;
+      }
+    }
+  }
+
+  .zn-header {
+    background-color: $base-main-tone !important;
+
+    .zn-main {
+      .el-menu.el-menu {
+        background-color: $base-main-tone !important;
+
+        &--horizontal {
+          .el-submenu,
+          .el-menu-item {
+            background-color: $base-main-tone !important;
+
+            &.is-active {
+              background-color: $base-main-tone-active !important;
+            }
+          }
+
+          > .el-menu-item,
+          .el-submenu__title {
+            background-color: $base-main-tone !important;
+
+            &.is-active {
+              background-color: $base-main-tone-active !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

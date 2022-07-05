@@ -1,0 +1,328 @@
+/**
+ * @description 绿-黑
+ */
+
+.theme-green-black {
+  $base-menu-background: #282c34;
+
+  $base-main-tone: #41b584;
+  $base-Success-6: #67c23a;
+  $base-Warning-6: #e6a23c;
+  $base-color-red: #f56c6c;
+  @import '../default.scss';
+
+  @mixin container {
+    background: $base-menu-background !important;
+  }
+
+  @mixin container-common {
+    background: $base-menu-background !important;
+  }
+
+  @mixin active {
+    &:hover {
+      color: $base-fill-1 !important;
+      background-color: $base-main-tone !important;
+    }
+
+    &.is-active {
+      color: $base-fill-1 !important;
+      background-color: $base-main-tone !important;
+    }
+  }
+
+  .logo-container-vertical,
+  .logo-container-horizontal,
+  .logo-container-comprehensive,
+  .logo-container-float {
+    @include container;
+  }
+
+  .logo-container-column {
+    .logo {
+      @include container;
+    }
+  }
+
+  .zn-column-bar-container.el-scrollbar {
+    .el-tabs {
+      .el-tabs__nav-wrap.is-left {
+        @include container;
+      }
+
+      .el-tabs__nav {
+        @include container;
+      }
+
+      .el-tabs__item.is-active {
+        background: $base-main-tone !important;
+      }
+    }
+
+    .el-menu {
+      .el-menu-item.is-active,
+      .el-submenu__title.is-active,
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        i {
+          color: $base-main-tone !important;
+        }
+
+        color: $base-main-tone !important;
+        background-color: $base-main-tone-light-9 !important;
+      }
+    }
+  }
+
+  .zn-column-bar-container-card.el-scrollbar {
+    .el-tabs {
+      .el-tabs__item.is-active {
+        background: transparent !important;
+
+        .zn-column-grid {
+          background: $base-main-tone !important;
+        }
+      }
+    }
+  }
+
+  .zn-column-bar-container-arrow.el-scrollbar {
+    .el-tabs {
+      .el-tabs__item.is-active {
+        background: transparent !important;
+
+        .zn-column-grid {
+          background: transparent !important;
+        }
+      }
+    }
+  }
+
+  .layout-vertical,
+  .layout-horizontal,
+  .layout-comprehensive,
+  .layout-float {
+    .el-menu {
+      @include container;
+
+      .el-submenu__title {
+        @include container;
+      }
+
+      .el-menu-item {
+        @include container;
+      }
+    }
+
+    .zn-side-bar,
+    .comprehensive-bar-container {
+      @include container;
+
+      .el-menu-item {
+        @include active;
+      }
+    }
+  }
+
+  .layout-float {
+    .el-scrollbar__view .el-menu--collapse.el-menu li.el-submenu.is-active {
+      .el-submenu__title {
+        background-color: transparent !important;
+      }
+      > .el-submenu__title {
+        background-color: $base-main-tone !important;
+      }
+    }
+  }
+
+  .layout-common {
+    .el-menu {
+      @include container-common;
+
+      .el-submenu__title {
+        @include container-common;
+      }
+
+      .el-menu-item {
+        @include container-common;
+      }
+    }
+
+    .zn-side-bar {
+      @include container-common;
+
+      .el-menu-item {
+        @include active;
+      }
+    }
+  }
+
+  .zn-header {
+    @include container;
+
+    .zn-main {
+      @include container;
+
+      .right-panel {
+        .el-menu.el-menu {
+          &--horizontal {
+            .el-submenu,
+            .el-menu-item {
+              @include active;
+
+              &.is-active {
+                background-color: $base-main-tone !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .zn-tabs {
+    &-more {
+      &-active,
+      &:hover {
+        .zn-tabs-more-icon {
+          .box:before,
+          .box:after {
+            background: $base-main-tone !important;
+          }
+        }
+      }
+    }
+
+    .zn-tabs-content-card {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-main-tone !important;
+            background: $base-main-tone-light-9 !important;
+            border: 1px solid $base-main-tone !important;
+          }
+
+          &:hover {
+            border: 1px solid $base-main-tone !important;
+          }
+        }
+      }
+    }
+
+    .zn-tabs-content-smart {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            background: $base-main-tone-light-9 !important;
+          }
+
+          &:after {
+            background-color: $base-main-tone !important;
+          }
+
+          &:hover {
+            background: $base-main-tone-light-9 !important;
+          }
+        }
+      }
+    }
+
+    .zn-tabs-content-smooth {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-main-tone !important;
+            background: $base-main-tone-light-9 !important;
+
+            &:hover {
+              color: $base-main-tone !important;
+              background: $base-main-tone-light-9 !important;
+            }
+          }
+
+          &:hover {
+            color: $base-text-5 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .zn-nav {
+    .el-tabs__item.is-active,
+    .el-tabs__item:hover {
+      color: $base-main-tone !important;
+    }
+
+    .el-tabs__active-bar {
+      background-color: $base-main-tone !important;
+    }
+  }
+
+  #nprogress {
+    .bar {
+      background: $base-main-tone !important;
+    }
+
+    .peg {
+      box-shadow: 0 0 10px $base-main-tone, 0 0 5px $base-main-tone !important;
+    }
+  }
+
+  .step-form-container {
+    .el-steps {
+      .el-step__head.is-process {
+        color: $base-main-tone !important;
+        border-color: $base-main-tone !important;
+
+        .el-step__icon.is-text {
+          color: $base-main-tone !important;
+          background: mix($base-fill-1, $base-main-tone, 90%) !important;
+        }
+
+        .el-step__line {
+          background: $base-main-tone !important;
+        }
+      }
+
+      .el-step__title.is-process {
+        color: $base-main-tone !important;
+      }
+
+      .el-step__description.is-process {
+        color: $base-main-tone !important;
+      }
+
+      .el-step__head.is-finish {
+        .el-step__icon.is-text {
+          color: $base-fill-1 !important;
+          background: $base-main-tone !important;
+        }
+
+        .el-step__line {
+          background: $base-main-tone !important;
+        }
+      }
+    }
+  }
+
+  .el-alert {
+    &--info.is-light {
+      color: $base-main-tone !important;
+      background-color: mix(
+        $base-fill-1,
+        $base-main-tone,
+        90%
+      ) !important;
+      border: 1px solid $base-main-tone !important;
+
+      i {
+        color: $base-main-tone !important;
+      }
+    }
+  }
+
+  .remix-icon-container .el-card__body::after {
+    background-color: $base-main-tone !important;
+  }
+}
