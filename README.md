@@ -12,8 +12,10 @@
 # 仿飞书表格||甘特图表格 ,搜索、筛选、字段管理、卡片管理功能
 
 # 效果预览
-https://raw.githubusercontent.com/Confidence-lzj/Vue-Filter-Table/main/assets/images/preview/preview-1.gif
-https://raw.githubusercontent.com/Confidence-lzj/Vue-Filter-Table/main/assets/images/preview/preview-2.gif
+![我是预览图片](https://raw.githubusercontent.com/Confidence-lzj/Vue-Filter-Table/main/assets/images/preview/preview-1.gif)
+![我是预览图片](https://raw.githubusercontent.com/Confidence-lzj/Vue-Filter-Table/main/assets/images/preview/preview-2.gif)
+
+
 
 ## 🔈 项目启动
 
